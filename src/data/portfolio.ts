@@ -97,7 +97,7 @@ export const projectsData = [
 ];
 
 export const contactData = {
-  email: "kotoneyoshino23@gmail.com",
+  email: "vrkotoneyoshino23@gmail.com",
   github: "https://github.com/SnowyMontBlanc",
 };
 
