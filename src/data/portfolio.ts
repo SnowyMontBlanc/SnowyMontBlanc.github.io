@@ -110,6 +110,13 @@ export const projectsData = [
   },
 ];
 
+export const worksData: {
+  title: string;
+  description: string;
+  technologies: string[];
+  url?: string;
+}[] = [];
+
 export const contactData = {
   email: "vrkotoneyoshino23@gmail.com",
   github: "https://github.com/SnowyMontBlanc",
@@ -120,5 +127,6 @@ export const navLinks = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
+  { name: "Works", href: "#works" },
   { name: "Contact", href: "#contact" },
 ];
