@@ -1,18 +1,16 @@
 import { skillsData, certificationsData } from "@/data/portfolio";
 
-function SkillBar({ name, level }: { name: string; level: number }) {
+function TagList({ items }: { items: { name: string; level: number }[] }) {
   return (
-    <div className="mb-4">
-      <div className="flex justify-between mb-1">
-        <span className="font-medium">{name}</span>
-        <span className="text-secondary">{level}%</span>
-      </div>
-      <div className="w-full bg-card-border rounded-full h-2">
-        <div
-          className="bg-primary h-2 rounded-full skill-bar"
-          style={{ "--skill-level": `${level}%`, width: `${level}%` } as React.CSSProperties}
-        />
-      </div>
+    <div className="flex flex-wrap gap-3">
+      {items.map((item) => (
+        <span
+          key={item.name}
+          className="px-4 py-2 bg-background rounded-full border border-card-border text-sm"
+        >
+          {item.name}
+        </span>
+      ))}
     </div>
   );
 }
@@ -23,29 +21,26 @@ export default function Skills() {
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12">Skills</h2>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-8 mb-8">
           <div className="p-6 bg-card-bg rounded-lg border border-card-border">
             <h3 className="text-xl font-semibold mb-6 text-primary">
-              Programming Languages
+              Languages & Frameworks
             </h3>
-            {skillsData.languages.map((skill) => (
-              <SkillBar key={skill.name} name={skill.name} level={skill.level} />
-            ))}
+            <TagList items={skillsData.languages} />
           </div>
 
           <div className="p-6 bg-card-bg rounded-lg border border-card-border">
-            <h3 className="text-xl font-semibold mb-6 text-primary">Database</h3>
-            {skillsData.databases.map((skill) => (
-              <SkillBar key={skill.name} name={skill.name} level={skill.level} />
-            ))}
+            <h3 className="text-xl font-semibold mb-6 text-primary">Mobile</h3>
+            <TagList items={skillsData.mobile} />
 
-            <h3 className="text-xl font-semibold mb-6 mt-8 text-primary">
-              Infrastructure
-            </h3>
-            {skillsData.infrastructure.map((skill) => (
-              <SkillBar key={skill.name} name={skill.name} level={skill.level} />
-            ))}
+            <h3 className="text-xl font-semibold mb-6 mt-8 text-primary">Database</h3>
+            <TagList items={skillsData.databases} />
           </div>
+        </div>
+
+        <div className="p-6 bg-card-bg rounded-lg border border-card-border mb-8">
+          <h3 className="text-xl font-semibold mb-6 text-primary">Infrastructure</h3>
+          <TagList items={skillsData.infrastructure} />
         </div>
 
         <div className="p-6 bg-card-bg rounded-lg border border-card-border mb-12">

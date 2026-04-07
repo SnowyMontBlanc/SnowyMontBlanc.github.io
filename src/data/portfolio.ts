@@ -11,10 +11,10 @@ export const profileData = {
 
 export const aboutData = {
   summary:
-    "2023年に北海道情報専門学校を卒業後、日本アイ・ビー・エムデジタルサービスに入社。金融系基幹システムの開発から、モバイルアプリのQA・開発まで幅広い経験を積んできました。特にアジャイル開発やスクラムに興味があり、認定スクラムマスター資格を取得しています。",
+    "2023年に北海道情報専門学校を卒業後、日本アイ・ビー・エムデジタルサービスに入社。金融系基幹システムの開発から、モバイルアプリの開発まで幅広い経験を積んできました。特にアジャイル開発やスクラムに興味があり、認定スクラムマスター資格を取得しています。",
   strengths: [
     "金融系システム開発の経験",
-    "モバイルアプリ（Android/iOS）のQA・開発経験",
+    "モバイルアプリ（Android/iOS）の開発経験",
     "アジャイル/スクラム開発の実践経験",
     "AWSクラウド基盤の知識",
   ],
@@ -24,6 +24,7 @@ export const skillsData = {
   languages: [
     { name: "Java", level: 80 },
     { name: "Kotlin", level: 70 },
+    { name: "Spring Boot", level: 60 },
     { name: "Python", level: 60 },
     { name: "JavaScript", level: 60 },
   ],
@@ -31,12 +32,16 @@ export const skillsData = {
     { name: "DB2", level: 70 },
     { name: "PostgreSQL", level: 60 },
   ],
+  mobile: [
+    { name: "Android", level: 70 },
+    { name: "iOS", level: 60 },
+  ],
   infrastructure: [
     { name: "AWS", level: 70 },
     { name: "Docker", level: 60 },
     { name: "Podman", level: 50 },
   ],
-  tools: ["Git", "Jenkins", "Jira", "Confluence", "Monday", "Firebase"],
+  tools: ["Git", "Jenkins", "Jira", "Confluence", "Monday", "Firebase", "ProxyMan"],
 };
 
 export const certificationsData = [
@@ -63,8 +68,8 @@ export const projectsData = [
     period: "2025年10月〜現在",
     client: "大手クレジットカード会社向け",
     description:
-      "金融系モバイルアプリのQAを担当。12名のQAチームでiOS/Android両プラットフォームのテストを実施。決済機能の正確性とセキュリティ要件の両面から品質を検証し、安全なリリースに貢献。",
-    technologies: ["Android", "iOS", "Jira", "Confluence", "Monday"],
+      "金融系モバイルアプリのQAを担当。3Dセキュア・FIDO認証など高セキュリティ要件の機能を中心にテストを実施。",
+    technologies: ["Android", "iOS", "Jira", "Confluence", "Monday", "ProxyMan"],
     role: "QAエンジニア",
   },
   {
@@ -72,17 +77,26 @@ export const projectsData = [
     period: "2025年5月〜2025年10月",
     client: "大手リテール企業向け",
     description:
-      "2,000万DL超の大規模リテールアプリの開発に参加。Kotlin/MVVM/Clean Architectureを用いて3〜5機能のUI実装・API連携を担当。6名のAndroidチームでコードレビューを通じて品質の高い実装を実現。",
+      "2,000万DL超の大規模リテールアプリの開発に参加。Kotlin/MVVM/Clean Architectureを採用し、GAM広告連携・Beacon機能の実装を担当。UI/UX改善に貢献。",
     technologies: ["Kotlin", "Android", "Firebase", "Git"],
     role: "開発メンバー",
   },
   {
-    title: "モバイルアプリQA",
-    period: "2024年9月〜2025年4月",
+    title: "Androidアプリ開発",
+    period: "2024年12月〜2025年4月",
     client: "家族向け見守りアプリ",
     description:
-      "家族向け見守りアプリのQAを担当。2名体制でiOS/Android両プラットフォームをカバーし、1スプリントあたり50件以上のテストケースを作成し、アプリ品質の向上に貢献。",
-    technologies: ["Android", "iOS", "Jira", "Confluence", "Monday"],
+      "家族向け見守りアプリのAndroid開発を担当。Kotlin/MVVM/Clean Architectureを採用し、位置情報共有・プッシュ通知・チャット機能の実装を担当。UI/UX改善に貢献。",
+    technologies: ["Kotlin", "Android", "Git"],
+    role: "開発メンバー",
+  },
+  {
+    title: "モバイルアプリQA",
+    period: "2024年9月〜2024年11月",
+    client: "家族向け見守りアプリ",
+    description:
+      "家族向け見守りアプリのQAを担当。",
+    technologies: ["Android", "iOS", "Jira", "Confluence", "Monday", "ProxyMan"],
     role: "QAエンジニア",
   },
   {
@@ -91,7 +105,7 @@ export const projectsData = [
     client: "大手メガバンク向け",
     description:
       "銀行の勘定系システムにおいて、基本設計から詳細設計・実装・テストまで一貫して担当。ホスト連携部品の開発や基盤構築に従事し、大規模金融システムの品質向上に貢献。",
-    technologies: ["Java", "DB2", "Git"],
+    technologies: ["Java", "Spring Boot", "Jenkins","DB2", "Git"],
     role: "開発メンバー",
   },
 ];
