@@ -87,7 +87,7 @@ export const projectsData = [
     client: "家族向け見守りアプリ",
     description:
       "家族向け見守りアプリのAndroid開発を担当。Kotlin/MVVM/Clean Architectureを採用し、位置情報共有・プッシュ通知・チャット機能の実装を担当。UI/UX改善に貢献。",
-    technologies: ["Kotlin", "Android", "Git"],
+    technologies: ["Kotlin", "Android", "Git", "Firebase"],
     role: "開発メンバー",
   },
   {
