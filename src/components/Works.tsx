@@ -66,6 +66,7 @@ export default function Works() {
                       href={work.url}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`View ${work.title} on GitHub`}
                       className="text-primary text-sm hover:underline"
                     >
                       GitHub →
