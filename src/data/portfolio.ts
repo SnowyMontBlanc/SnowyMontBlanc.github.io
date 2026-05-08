@@ -115,7 +115,36 @@ export const worksData: {
   description: string;
   technologies: string[];
   url?: string;
-}[] = [];
+  image?: string;
+  highlights?: string[];
+  category?: string;
+}[] = [
+  {
+    title: "NekoLex — 猫品種マスター",
+    description: "猫を撮るだけで品種がわかる。ゲーム感覚で学べる iOS / Android アプリ。",
+    category: "iOS & Android App",
+    image:
+      "https://raw.githubusercontent.com/SnowyMontBlanc/nekolex/main/assets/screenshots/home.png",
+    highlights: [
+      "Gemini 2.5 Flash で品種と信頼度を数秒で識別",
+      "図鑑コレクション 20品種（発見済み/未発見を視覚的に管理）",
+      "間隔反復クイズで記憶を定着（1→3→7→14→30→60日）",
+      "Go プロキシ + Cloud Run でAPIキーをサーバー側に隔離",
+      "GitHub Actions で lint → test → デプロイを全自動化",
+    ],
+    technologies: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "Go",
+      "Gemini AI",
+      "Cloud Run",
+      "GCS",
+      "GitHub Actions",
+    ],
+    url: "https://github.com/SnowyMontBlanc/nekolex",
+  },
+];
 
 export const contactData = {
   email: "vrkotoneyoshino23@gmail.com",
